@@ -10,6 +10,14 @@
    
 </div>
 
+```python
+import json
+import pandas as pd
+print(pd.DataFrame(
+pd.DataFrame(json.loads(pd.read_json("temp/video_music/音频分割.json",lines=True).\
+                        iloc[0, 0]["result"])["annotations"])["result"].iloc[0]).to_markdown())
+```
+
 ## Product Introduction
 
 LabelU is a comprehensive data annotation platform designed for handling multimodal data. It offers a range of advanced annotation tools and efficient workflows, making it easier for users to tackle annotation tasks involving images, videos, and audio. LabelU is tailored to meet the demands of complex data analysis and model training.
